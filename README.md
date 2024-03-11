@@ -70,7 +70,7 @@ To achieve $\epsilon=1,2,4$ under 10 epochs,  we set noise level
 
 ### Wandb
  
-For visualization with Wandb, configure your `--wandb_key` and `--project` with your key and project name in `dpsda/arg_utils.py`.
+For visualization with Wandb, configure the `--wandb_key` and `--project` with your key and project name in `dpsda/arg_utils.py`.
 
 
 ## 🚀 Run (open-source LLMs)
@@ -84,13 +84,13 @@ bash scripts/hf/{dataset}/generate.sh  # Replace `{dataset}` with yelp, openrevi
 ```
 Some key hyperparameters: 
 - `noise`: DP noise.
-- `epoch`: we use 10 epochs for DP setting. For non-DP setting, we use 20 epochs for Yelp and 10 epochs for other datasets. 
+- `epoch`: we use 10 epochs for DP setting. For the non-DP setting, we use 20 epochs for Yelp and 10 epochs for other datasets. 
 - `model_type`: model on huggingface, such as ["gpt2", "gpt2-medium", "gpt2-large", "meta-llama/Llama-2-7b-chat-hf", "tiiuae/falcon-7b-instruct", "facebook/opt-6.7b", "lmsys/vicuna-7b-v1.5", "mistralai/Mixtral-8x7B-Instruct-v0.1"].
 - `num_seed_samples`: number of synthetic samples. 
 - `lookahead_degree`: number of variations for synthetic sample embedding estimation (line 5 in Aug-PE algorithm). Default is 0 (self-embedding).
 - `L`: related to the number of variations to generate candidate synthetic samples (line 18 in Aug-PE algorithm)
 - `feat_ext`: embedding model on [huggingface sentence-transformers](https://huggingface.co/sentence-transformers).
-- `select_syn_mode`: select synthetic samples according to distance ranking or probability. Default is `rank` (line 19 in Aug-PE algorithm)
+- `select_syn_mode`: select synthetic samples according to histogram votes or probability. Default is `rank` (line 19 in Aug-PE algorithm)
 - `temperature`: temperature for LLM generation.
 
 
@@ -129,15 +129,15 @@ MODEL_CONFIG={
 Here `engine` could be `gpt-35-turbo` in [Azure](https://learn.microsoft.com/en-us/azure/ai-services/openai/quickstart?tabs=command-line,python&pivots=programming-language-python).
 
 
-Run the following script to generate synthetic data,  evaluate it on downstream task and calculate embedding distribution distance between real and synthetic data: 
+Run the following script to generate synthetic data,  evaluate it on the downstream task, and calculate the embedding distribution distance between real and synthetic data: 
 ```bash 
 bash scripts/gpt-3.5-turbo/{dataset}.sh
 ```
 
 We use text-length related prompts for GPT-3.5 to control the length of the generated text. We introduce several additional hyperparameters here:
-- `dynamic_len` is used to enbale the dynamic length mechanism.
+- `dynamic_len` is used to enable the dynamic length mechanism.
 - `word_var_scale`:  Gaussian noise variance used to determine targeted_word.  
-- `max_token_word_scale`: max number of tokens per word. We set the max_token for LLM generation based on the targeted_word (specificed in the prompt) and  max_token_word_scale. 
+- `max_token_word_scale`: max number of tokens per word. We set the max_token for LLM generation based on the targeted_word (specified in the prompt) and  max_token_word_scale. 
 
 
 Use the notebook to calculate the text length distribution difference between real and synthetic data:  `notebook/text_lens_distribution.ipynb`
