@@ -3,7 +3,7 @@
 <p align="center">
 <a href="https://arxiv.org/abs/2403.01749">📃 Paper</a>
 •
-<a href="https://github.com/AI-secure/aug-pe/data" >Data (Yelp/OpenReview/PubMed)</a>
+<a href="https://github.com/AI-secure/aug-pe/tree/main/data" > Data (Yelp/OpenReview/PubMed)</a>
 <!-- •
 <a href="" >Project Page</a> -->
 </p>
