@@ -1,5 +1,13 @@
+data/
+docker/build.sh
+docker/run.sh
+result/
+wandb/
+utility_eval/tmp/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*/__pycache__/
 *.py[cod]
 *$py.class
 

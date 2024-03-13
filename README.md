@@ -4,8 +4,8 @@
 <a href="https://arxiv.org/abs/2403.01749">📃 Paper</a>
 •
 <a href="https://github.com/AI-secure/aug-pe/tree/main/data" > Data (Yelp/OpenReview/PubMed)</a>
-<!-- •
-<a href="" >Project Page</a> -->
+•
+<a href="https://alphapav.github.io/augpe-dpapitext" >Project Page</a>
 </p>
 
 
@@ -26,8 +26,8 @@ This repository implements the Augmented Private Evolution (Aug-PE) algorithm, l
 
 ## News
 
-
-* `03/11/2024`: Code and ArXiv paper are available.
+* `03/13/2024`: <a href="https://alphapav.github.io/augpe-dpapitext">Project page</a> is available, which outlines the algorithm and its results. 
+* `03/11/2024`: Code and <a href="https://arxiv.org/abs/2403.01749">ArXiv paper</a> are available.
 
 
 ## Setup
