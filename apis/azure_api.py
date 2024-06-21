@@ -201,7 +201,7 @@ class AzureAPI(API):
                     rand_keyword_idx = random.randrange(
                         len(self.subcategory_dict['openreview']))
                     keyword = self.subcategory_dict['openreview'][rand_keyword_idx]
-                    # don't use this!
+                    
                     prefix = f"Suppose that you are a {keyword}, and your answer should contain 1000 words.\n" + prompt
                 elif "pubmed" in self.variation_type:
                     prefix = PUBMED_INIT_templates[random.randrange(
