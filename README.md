@@ -158,13 +158,13 @@ Use the notebook to calculate the text length distribution difference between re
 ## 📚 Citation
 If you find our work helpful, please consider citing it as follows:
 ```bibtex
-@misc{xie2024differentially,
-      title={Differentially Private Synthetic Data via Foundation Model APIs 2: Text}, 
-      author={Chulin Xie and Zinan Lin and Arturs Backurs and Sivakanth Gopi and Da Yu and Huseyin A Inan and Harsha Nori and Haotian Jiang and Huishuai Zhang and Yin Tat Lee and Bo Li and Sergey Yekhanin},
-      year={2024},
-      eprint={2403.01749},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{
+xie2024differentially,
+title={Differentially Private Synthetic Data via Foundation Model {API}s 2: Text},
+author={Chulin Xie and Zinan Lin and Arturs Backurs and Sivakanth Gopi and Da Yu and Huseyin A Inan and Harsha Nori and Haotian Jiang and Huishuai Zhang and Yin Tat Lee and Bo Li and Sergey Yekhanin},
+booktitle={Forty-first International Conference on Machine Learning},
+year={2024},
+url={https://openreview.net/forum?id=LWD7upg1ob}
 }
 ```
 
