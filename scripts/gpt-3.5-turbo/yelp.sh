@@ -12,16 +12,16 @@ echo generating $num_samples samples
 
 epochs=20
 noise=0 # [15.34, 8.03, 4.24,0],
-select_syn_mode=rank
+select_syn_mode="rank"
 model_type="gpt-3.5-turbo" # "gpt2" "gpt-3.5-turbo"
 api="AzureGPT"
 var_type="yelp_blank_fill_3_shot_word"
 word_var_scale=40
 max_token_word_scale=1.2 
-args="--dynamic_len --word_var_scale ${word_var_scale} --max_token_word_scale ${max_token_word_scale}"
+args="--dynamic_len --word_var_scale ${word_var_scale} --max_token_word_scale ${max_token_word_scale}" # --donnot_keep_last_iter was used for the Yelp GPT-3.5 results
 result_folder="result/yelp/${model_type}_${feat_ext}/${num_samples}_n${noise}_L${L}_initL${init_L}_var${lookahead_degree}_${var_type}_${select_syn_mode}_len${length}var${word_var_scale}_t${temperature}"
 
-### load datacheckpoint 
+### load data checkpoint 
 data_checkpoint_args=""
 for  (( iter=0; iter<=epochs; iter++ ))
 do
