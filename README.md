@@ -25,7 +25,7 @@ This repository implements the Augmented Private Evolution (Aug-PE) algorithm, l
 
 
 ## News
-
+* `01/10/2025`: <a href="https://microsoft.github.io/DPSDA/">Private Evolution library</a> is available for both image and text! 
 * `03/13/2024`: <a href="https://alphapav.github.io/augpe-dpapitext">Project page</a> is available, which outlines the algorithm and its results. 
 * `03/11/2024`: Code and <a href="https://arxiv.org/abs/2403.01749">ArXiv paper</a> are available.
 
